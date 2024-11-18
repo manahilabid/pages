@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css start -->
+    <style>
+        .modal{
+            background-color: aqua;
+            box-shadow: 1px 1px 5px;
+            width: 30%;
+            position: absolute;
+            top: 50%;
+            transform: translate( -50% -50%)                              ;
+        }
+        .overlay{
+            background-color: blueviolet;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            right: 0%;
+            bottom: 0%;
+            opacity: 50%; 
+                            
+        }
+        .readmore{
+            background-color: darkgray;
+            text-align: center;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .slidecontent{
+            background-color: ivory;
+            text-align: center;
+            padding: 20px;
+            border: top 1px solid black;
+        }
+        .para{
+            background-color: burlywood;
+            width: 250px;
+            height: 220px;
+        }
+        .click{
+            background-color:cornflowerblue;
+            text-align: center;
+            cursor: pointer;
+            font-size: 20px; 
+        }
+        .div{
+            background-color:darkseagreen;
+            text-align: center;
+            padding: 20px;
+            border: top 1px solid black;
+        }
+        .animate{
+            background-color: aquamarine;
+        }
+        .mybtn{
+            background-color: lightblue;  
+            height: 30px                ;
+        }
+        /* css end */
+    </style>
+</head>
+<body>
+    <!-- html start -->
+  <h1>show/hide</h1>
+   <button id="show">show</button>
+   <div class="modal">
+    <div class="overlay">
+        <button id="hide">hide</button>
+        <h1>hello world</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque nesciunt pariatur quaerat unde adipisci similique reprehenderit inventore repudiandae cum quae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae esse numquam tempore veritatis inventore doloribus, asperiores qui minima deserunt fugiat?</p>
+    </div>
+   </div>
+      <br><br>
+  <h1>fadetoggle</h1>
+   <button class="mybtn">click here</button>
+   <div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus laborum non perferendis facere explicabo officiis consectetur exercitationem atque, totam odit?</div>
+   <br><br>
+   <h1>div to btn</h1>
+   <div class="readmore">readmore</div>
+   <div class="slidecontent">
+    <h1>hello world</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dolore ullam iste reprehenderit corporis laborum quas deleniti et aliquid tenetur temporibus totam voluptate quaerat cumque, odit earum magnam voluptates repellat.</p>
+   </div>
+   <br><br>
+   <div class="click">click here</div>
+   <div class="div">
+    <h1>jquery</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid earum asperiores hic cupiditate recusandae laboriosam odit dolorum error culpa sint.</p>
+   </div>
+   <br><br>
+   <h1>slide toggle</h1>
+   <button class="btn">click here </button>
+   <div class="para">
+    <h1>hey!
+    </h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero expedita ullam distinctio deserunt? Dicta, nesciunt sit! Nesciunt officiis aliquid Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque cumque placeat facere Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam recusandae accusamus!</div>
+   <br><br>
+   
+   <br><br>
+   <button class="ani_btn">animate</button>
+   <div class="animate">
+    <h1>hey! it's jquery</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolorum ad quis.</p>
+   </div>
+   <!-- html end -->
+<!-- link -->
+   <script src="jquery/jquery.js"></script>
+    <script>
+        // jqurey
+    $(document).ready(function(){
+       $('#hide').click(function(){
+        $('.modal').fadeOut()
+       })
+      
+       $('#show').click(function(){
+        $('.modal').fadeIn()
+       })
+      
+       $('.mybtn').click(function(){
+        $('.text').fadeToggle()
+       })
+       
+       $('.readmore').click(function(){
+        $('.slidecontent').slideToggle(2000)
+       })
+       
+       $('.btn').click(function(){
+        $('.para').fadeToggle(1000)
+       })
+       $('.click').click(function(){
+        $('.div').slideToggle(5000)
+       })
+      
+      
+    })
+    // jquery
+       </script>
+   
+</body>
+</html>
